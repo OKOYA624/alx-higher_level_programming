@@ -1,47 +1,25 @@
 
 
+You have a captain's log due before 2023-10-08 (in 1 day)! Log it now!
 We're moving to Discord!
 In a few days, we will be leaving Slack in favor of Discord 🎉
 Click here for more information
-0x00. Python - Hello, World
+0x03. Python - Data Structures: Lists, Tuples
 Python
 
     By: Guillaume
     Weight: 1
-    Project will start Oct 2, 2023 6:00 AM, must end by Oct 3, 2023 6:00 AM
-    Checker was released at Oct 2, 2023 12:00 PM
+    Project will start Oct 6, 2023 6:00 AM, must end by Oct 10, 2023 6:00 AM
+    Checker will be released at Oct 7, 2023 6:00 AM
     An auto review will be launched at the deadline
-
-Concepts
-
-For this project, we expect you to look at this concept:
-
-    Python programming
-
-Author’s disclaimer
-
-Welcome to the Python world!
-
-The first projects are more "C-oriented" - no tricks, no funky syntax - simple!
-If you've already played with Python, don't worry, fun things will come.
-You'll soon find that with Python (and the majority of higher level languages), there are ten different ways to do the same thing. Some tasks will expect only one implementation, while other tasks will have multiple possible implementations.
-Like C, Python also has a linter / style guide like Betty, called PEP8, also now known as PyCode.
-
-Enjoy!
-
-- Guillaume
 
 Resources
 
 Read or watch:
 
-    The Python tutorial (only the first three chapters below)
-    Whetting Your Appetite
-    Using the Python Interpreter
-    An Informal Introduction to Python (Read up until “3.1.2. Strings” included)
-    How To Use String Formatters in Python 3
-    Learn to Program
-    Pycodestyle – Style Guide for Python Code
+    3.1.3. Lists
+    Data structures (until 5.3. Tuples and Sequences included)
+    Learn to Program 6 : Lists
 
 Learning Objectives
 
@@ -49,15 +27,17 @@ At the end of this project, you are expected to be able to explain to anyone, wi
 General
 
     Why Python programming is awesome
-    Who created Python
-    Who is Guido van Rossum
-    Where does the name ‘Python’ come from
-    What is the Zen of Python
-    How to use the Python interpreter
-    How to print text and variables using print
-    How to use strings
-    What are indexing and slicing in Python
-    What is the official Python coding style and how to check your code with pycodestyle
+    What are lists and how to use them
+    What are the differences and similarities between strings and lists
+    What are the most common methods of lists and how to use them
+    How to use lists as stacks and queues
+    What are list comprehensions and how to use them
+    What are tuples and how to use them
+    When to use tuples versus lists
+    What is a sequence
+    What is tuple packing
+    What is sequence unpacking
+    What is the del statement and how to use it
 
 Copyright - Plagiarism
 
@@ -73,25 +53,15 @@ Python Scripts
     All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
     All your files should end with a new line
     The first line of all your files should be exactly #!/usr/bin/python3
-    A README.md file at the root of the repo, containing a description of the repository
-    A README.md file, at the root of the folder of this project, is mandatory
+    A README.md file, at the root of the folder of the project, is mandatory
     Your code should use the pycodestyle (version 2.8.*)
     All your files must be executable
     The length of your files will be tested using wc
 
-Shell Scripts
+C
 
     Allowed editors: vi, vim, emacs
-    All your scripts will be tested on Ubuntu 20.04 LTS
-    All your scripts should be exactly two lines long (wc -l file should print 2)
-    All your files should end with a new line
-    The first line of all your files should be exactly #!/bin/bash
-    All your files must be executable
-
-C Scripts
-
-    Allowed editors: vi, vim, emacs
-    All your files will be compiled on Ubuntu 20.04 LTS using gcc, using the options -Wall -Werror -Wextra -pedantic -std=gnu89
+    All your files will be interpreted/compiled on Ubuntu 20.04 LTS using python3 (version 3.8.5)
     All your files should end with a new line
     Your code should use the Betty style. It will be checked using betty-style.pl and betty-doc.pl
     You are not allowed to use global variables
@@ -101,298 +71,443 @@ C Scripts
     Don’t forget to push your header file
     All your header files should be include guarded
 
-More Info
-Zen
-
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-
-Pycodestyle
-
-Pycodestyle is now the new standard of Python style code
-
-
-
 Quiz questions
 Great! You've completed the quiz successfully! Keep going! (Show quiz)
 Tasks
-0. Run Python file
+0. Print a list of integers
 mandatory
 
-Write a Shell script that runs a Python script.
+Write a function that prints all integers of a list.
 
-The Python file name will be saved in the environment variable $PYFILE
+    Prototype: def print_list_integer(my_list=[]):
+    Format: one integer per line. See example
+    You are not allowed to import any module
+    You can assume that the list only contains integers
+    You are not allowed to cast integers into strings
+    You have to use str.format() to print integers
 
-guillaume@ubuntu:~/py/0x00$ cat main.py 
+guillaume@ubuntu:~/0x03$ cat 0-main.py
 #!/usr/bin/python3
-print("Best School")
+print_list_integer = __import__('0-print_list_integer').print_list_integer
 
-guillaume@ubuntu:~/py/0x00$ export PYFILE=main.py
-guillaume@ubuntu:~/py/0x00$ ./0-run
-Best School
-guillaume@ubuntu:~/py/0x00$ 
+my_list = [1, 2, 3, 4, 5]
+print_list_integer(my_list)
 
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 0-run
-
-1. Run inline
-mandatory
-
-Write a Shell script that runs Python code.
-
-The Python code will be saved in the environment variable $PYCODE
-
-guillaume@ubuntu:~/py/0x00$ export PYCODE='print(f"Best School: {88+10}")'
-guillaume@ubuntu:~/py/0x00$ ./1-run_inline 
-Best School: 98
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/0x03$ ./0-main.py
+1
+2
+3
+4
+5
+guillaume@ubuntu:~/0x03$ 
 
 Repo:
 
     GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 1-run_inline
+    Directory: 0x03-python-data_structures
+    File: 0-print_list_integer.py
 
-2. Hello, print
+1. Secure access to an element in a list
 mandatory
 
-Write a Python script that prints exactly "Programming is like building a multilingual puzzle, followed by a new line.
+Write a function that retrieves an element from a list like in C.
 
-    Use the function print
+    Prototype: def element_at(my_list, idx):
+    If idx is negative, the function should return None
+    If idx is out of range (> of number of element in my_list), the function should return None
+    You are not allowed to import any module
+    You are not allowed to use try/except
 
-guillaume@ubuntu:~/py/0x00$ ./2-print.py 
-"Programming is like building a multilingual puzzle
-guillaume@ubuntu:~/py/0x00$
+guillaume@ubuntu:~/0x03$ cat 1-main.py
+#!/usr/bin/python3
+element_at = __import__('1-element_at').element_at
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+print("Element at index {:d} is {}".format(idx, element_at(my_list, idx)))
+
+guillaume@ubuntu:~/0x03$ ./1-main.py
+Element at index 3 is 4
+guillaume@ubuntu:~/0x03$ 
 
 Repo:
 
     GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 2-print.py
+    Directory: 0x03-python-data_structures
+    File: 1-element_at.py
 
-3. Print integer
+2. Replace element
 mandatory
 
-Complete this source code in order to print the integer stored in the variable number, followed by Battery street, followed by a new line.
+Write a function that replaces an element of a list at a specific position (like in C).
+
+    Prototype: def replace_in_list(my_list, idx, element):
+    If idx is negative, the function should not modify anything, and returns the original list
+    If idx is out of range (> of number of element in my_list), the function should not modify anything, and returns the original list
+    You are not allowed to import any module
+    You are not allowed to use try/except
+
+guillaume@ubuntu:~/0x03$ cat 2-main.py
+#!/usr/bin/python3
+replace_in_list = __import__('2-replace_in_list').replace_in_list
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_element = 9
+new_list = replace_in_list(my_list, idx, new_element)
+
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x03$ ./2-main.py
+[1, 2, 3, 9, 5]
+[1, 2, 3, 9, 5]
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 2-replace_in_list.py
+
+3. Print a list of integers... in reverse!
+mandatory
+
+Write a function that prints all integers of a list, in reverse order.
+
+    Prototype: def print_reversed_list_integer(my_list=[]):
+    Format: one integer per line. See example
+    You are not allowed to import any module
+    You can assume that the list only contains integers
+    You are not allowed to cast integers into strings
+    You have to use str.format() to print integers
+
+guillaume@ubuntu:~/0x03$ cat 3-main.py
+#!/usr/bin/python3
+print_reversed_list_integer = __import__('3-print_reversed_list_integer').print_reversed_list_integer
+
+my_list = [1, 2, 3, 4, 5]
+print_reversed_list_integer(my_list)
+
+guillaume@ubuntu:~/0x03$ ./3-main.py
+5
+4
+3
+2
+1
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 3-print_reversed_list_integer.py
+
+4. Replace in a copy
+mandatory
+
+Write a function that replaces an element in a list at a specific position without modifying the original list (like in C).
+
+    Prototype: def new_in_list(my_list, idx, element):
+    If idx is negative, the function should return a copy of the original list
+    If idx is out of range (> of number of element in my_list), the function should return a copy of the original list
+    You are not allowed to import any module
+    You are not allowed to use try/except
+
+guillaume@ubuntu:~/0x03$ cat 4-main.py
+#!/usr/bin/python3
+new_in_list = __import__('4-new_in_list').new_in_list
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_element = 9
+new_list = new_in_list(my_list, idx, new_element)
+
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x03$ ./4-main.py
+[1, 2, 3, 9, 5]
+[1, 2, 3, 4, 5]
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 4-new_in_list.py
+
+5. Can you C me now?
+mandatory
+
+Write a function that removes all characters c and C from a string.
+
+    Prototype: def no_c(my_string):
+    The function should return the new string
+    You are not allowed to import any module
+    You are not allowed to use str.replace()
+
+guillaume@ubuntu:~/0x03$ cat 5-main.py
+#!/usr/bin/env python3
+no_c = __import__('5-no_c').no_c
+
+print(no_c("Best School"))
+print(no_c("Chicago"))
+print(no_c("C is fun!"))
+
+guillaume@ubuntu:~/0x03$ ./5-main.py
+Best Shool
+hiago
+ is fun!
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 5-no_c.py
+
+6. Lists of lists = Matrix
+mandatory
+
+Write a function that prints a matrix of integers.
+
+    Prototype: def print_matrix_integer(matrix=[[]]):
+    Format: see example
+    You are not allowed to import any module
+    You can assume that the list only contains integers
+    You are not allowed to cast integers into strings
+    You have to use str.format() to print integers
+
+guillaume@ubuntu:~/0x03$ cat 6-main.py
+#!/usr/bin/python3
+print_matrix_integer = __import__('6-print_matrix_integer').print_matrix_integer
+
+matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+print_matrix_integer(matrix)
+print("--")
+print_matrix_integer()
+
+guillaume@ubuntu:~/0x03$ ./6-main.py | cat -e
+1 2 3$
+4 5 6$
+7 8 9$
+--$
+$
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 6-print_matrix_integer.py
+
+7. Tuples addition
+mandatory
+
+Write a function that adds 2 tuples.
+
+    Prototype: def add_tuple(tuple_a=(), tuple_b=()):
+    Returns a tuple with 2 integers:
+        The first element should be the addition of the first element of each argument
+        The second element should be the addition of the second element of each argument
+    You are not allowed to import any module
+    You can assume that the two tuples will only contain integers
+    If a tuple is smaller than 2, use the value 0 for each missing integer
+    If a tuple is bigger than 2, use only the first 2 integers
+
+guillaume@ubuntu:~/0x03$ cat 7-main.py
+#!/usr/bin/python3
+add_tuple = __import__('7-add_tuple').add_tuple
+
+tuple_a = (1, 89)
+tuple_b = (88, 11)
+new_tuple = add_tuple(tuple_a, tuple_b)
+print(new_tuple)
+
+print(add_tuple(tuple_a, (1, )))
+print(add_tuple(tuple_a, ()))
+
+guillaume@ubuntu:~/0x03$ ./7-main.py
+(89, 100)
+(2, 89)
+(1, 89)
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 7-add_tuple.py
+
+8. More returns!
+mandatory
+
+Write a function that returns a tuple with the length of a string and its first character.
+
+    Prototype: def multiple_returns(sentence):
+    If the sentence is empty, the first character should be equal to None
+    You are not allowed to import any module
+
+guillaume@ubuntu:~/0x03$ cat 8-main.py
+#!/usr/bin/python3
+multiple_returns = __import__('8-multiple_returns').multiple_returns
+
+sentence = "At school, I learnt C!"
+length, first = multiple_returns(sentence)
+print("Length: {:d} - First character: {}".format(length, first))
+
+guillaume@ubuntu:~/0x03$ ./8-main.py
+Length: 22 - First character: A
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 8-multiple_returns.py
+
+9. Find the max
+mandatory
+
+Write a function that finds the biggest integer of a list.
+
+    Prototype: def max_integer(my_list=[]):
+    If the list is empty, return None
+    You can assume that the list only contains integers
+    You are not allowed to import any module
+    You are not allowed to use the builtin max()
+
+guillaume@ubuntu:~/0x03$ cat 9-main.py
+#!/usr/bin/python3
+max_integer = __import__('9-max_integer').max_integer
+
+my_list = [1, 90, 2, 13, 34, 5, -13, 3]
+max_value = max_integer(my_list)
+print("Max: {}".format(max_value))
+
+guillaume@ubuntu:~/0x03$ ./9-main.py
+Max: 90
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 9-max_integer.py
+
+10. Only by 2
+mandatory
+
+Write a function that finds all multiples of 2 in a list.
+
+    Prototype: def divisible_by_2(my_list=[]):
+    Return a new list with True or False, depending on whether the integer at the same position in the original list is a multiple of 2
+    The new list should have the same size as the original list
+    You are not allowed to import any module
+
+guillaume@ubuntu:~/0x03$ cat 10-main.py
+#!/usr/bin/python3
+divisible_by_2 = __import__('10-divisible_by_2').divisible_by_2
+
+my_list = [0, 1, 2, 3, 4, 5, 6]
+list_result = divisible_by_2(my_list)
+
+i = 0
+while i < len(list_result):
+    print("{:d} {:s} divisible by 2".format(my_list[i], "is" if list_result[i] else "is not"))
+    i += 1
+
+guillaume@ubuntu:~/0x03$ ./10-main.py
+0 is divisible by 2
+1 is not divisible by 2
+2 is divisible by 2
+3 is not divisible by 2
+4 is divisible by 2
+5 is not divisible by 2
+6 is divisible by 2
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 10-divisible_by_2.py
+
+11. Delete at
+mandatory
+
+Write a function that deletes the item at a specific position in a list.
+
+    Prototype: def delete_at(my_list=[], idx=0):
+    If idx is negative or out of range, nothing change (returns the same list)
+    You are not allowed to use pop()
+    You are not allowed to import any module
+
+guillaume@ubuntu:~/0x03$ cat 11-main.py
+#!/usr/bin/python3
+delete_at = __import__('11-delete_at').delete_at
+
+my_list = [1, 2, 3, 4, 5]
+idx = 3
+new_list = delete_at(my_list, idx)
+print(new_list)
+print(my_list)
+
+guillaume@ubuntu:~/0x03$ ./11-main.py
+[1, 2, 3, 5]
+[1, 2, 3, 5]
+guillaume@ubuntu:~/0x03$ 
+
+Repo:
+
+    GitHub repository: alx-higher_level_programming
+    Directory: 0x03-python-data_structures
+    File: 11-delete_at.py
+
+12. Switch
+mandatory
+
+Complete the source code in order to switch value of a and b
 
     You can find the source code here
-    The output of the script should be:
-        the number, followed by Battery street,
-        followed by a new line
-    You are not allowed to cast the variable number into a string
-    Your code must be 3 lines long
-    You have to use f-strings tips
-
-guillaume@ubuntu:~/py/0x00$ ./3-print_number.py
-98 Battery street
-guillaume@ubuntu:~/py/0x00$ 
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 3-print_number.py
-
-4. Print float
-mandatory
-
-Complete the source code in order to print the float stored in the variable number with a precision of 2 digits.
-
-    You can find the source code here
-    The output of the program should be:
-        Float:, followed by the float with only 2 digits
-        followed by a new line
-    You are not allowed to cast number to string
-    You have to use f-strings
-
-guillaume@ubuntu:~/py/0x00$ ./4-print_float.py
-Float: 3.14
-guillaume@ubuntu:~/py/0x00$ 
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 4-print_float.py
-
-5. Print string
-mandatory
-
-Complete this source code in order to print 3 times a string stored in the variable str, followed by its first 9 characters.
-
-    You can find the source code here
-    The output of the program should be:
-        3 times the value of str
-        followed by a new line
-        followed by the 9 first characters of str
-        followed by a new line
-    You are not allowed to use any loops or conditional statement
-    Your program should be maximum 5 lines long
-
-guillaume@ubuntu:~/py/0x00$ ./5-print_string.py 
-Holberton SchoolHolberton SchoolHolberton School
-Holberton
-guillaume@ubuntu:~/py/0x00$ 
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 5-print_string.py
-
-6. Play with strings
-mandatory
-
-Complete this source code to print Welcome to Holberton School!
-
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements.
-    You have to use the variables str1 and str2 in your new line of code
+    Your code should be inserted where the comment is (line 4)
     Your program should be exactly 5 lines long
 
-guillaume@ubuntu:~/py/0x00$ ./6-concat.py
-Welcome to Holberton School!
-guillaume@ubuntu:~/py/0x00$ wc -l 6-concat.py
-5 6-concat.py
-guillaume@ubuntu:~/py/0x00$ 
+guillaume@ubuntu:~/py/0x03$ ./12-switch.py
+a=10 - b=89
+guillaume@ubuntu:~/py/0x03$ wc -l 12-switch.py
+5 12-switch.py
+guillaume@ubuntu:~/py/0x03$ 
 
 Repo:
 
     GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 6-concat.py
+    Directory: 0x03-python-data_structures
+    File: 12-switch.py
 
-7. Copy - Cut - Paste
-mandatory
-
-Complete this source code
-
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements
-    Your program should be exactly 8 lines long
-    word_first_3 should contain the first 3 letters of the variable word
-    word_last_2 should contain the last 2 letters of the variable word
-    middle_word should contain the value of the variable word without the first and last letters
-
-guillaume@ubuntu:~/py/0x00$ ./7-edges.py
-First 3 letters: Hol
-Last 2 letters: on
-Middle word: olberto
-guillaume@ubuntu:~/py/0x00$ wc -l 7-edges.py
-8 7-edges.py
-guillaume@ubuntu:~/py/0x00$ 
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 7-edges.py
-
-8. Create a new sentence
-mandatory
-
-Complete this source code to print object-oriented programming with Python, followed by a new line.
-
-    You can find the source code here
-    You are not allowed to use any loops or conditional statements
-    Your program should be exactly 5 lines long
-    You are not allowed to create new variables
-    You are not allowed to use string literals
-
-guillaume@ubuntu:~/py/0x00$ ./8-concat_edges.py
-object-oriented programming with Python
-guillaume@ubuntu:~/py/0x00$ wc -l 8-concat_edges.py
-5 8-concat_edges.py
-guillaume@ubuntu:~/py/0x00$ 
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 8-concat_edges.py
-
-9. Easter Egg
-mandatory
-
-Write a Python script that prints “The Zen of Python”, by TimPeters, followed by a new line.
-
-    Your script should be maximum 98 characters long (please check with wc -m 9-easter_egg.py)
-
-guillaume@ubuntu:~/py/0x00$ ./9-easter_egg.py
-The Zen of Python, by Tim Peters
-
-Beautiful is better than ugly.
-Explicit is better than implicit.
-Simple is better than complex.
-Complex is better than complicated.
-Flat is better than nested.
-Sparse is better than dense.
-Readability counts.
-Special cases aren't special enough to break the rules.
-Although practicality beats purity.
-Errors should never pass silently.
-Unless explicitly silenced.
-In the face of ambiguity, refuse the temptation to guess.
-There should be one-- and preferably only one --obvious way to do it.
-Although that way may not be obvious at first unless you're Dutch.
-Now is better than never.
-Although never is often better than *right* now.
-If the implementation is hard to explain, it's a bad idea.
-If the implementation is easy to explain, it may be a good idea.
-Namespaces are one honking great idea -- let's do more of those!
-guillaume@ubuntu:~/py/0x00$
-
-Repo:
-
-    GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 9-easter_egg.py
-
-10. Linked list cycle
+13. Linked list palindrome
 mandatory
 
 Technical interview preparation:
 
     You are not allowed to google anything
     Whiteboard first
-    This task and all future technical interview prep tasks will include checks for the efficiency of your solution, i.e. is your solution’s runtime fast enough, does your solution require extra memory usage / mallocs, etc.
 
-Write a function in C that checks if a singly linked list has a cycle in it.
+Write a function in C that checks if a singly linked list is a palindrome.
 
-    Prototype: int check_cycle(listint_t *list);
-    Return: 0 if there is no cycle, 1 if there is a cycle
+    Prototype: int is_palindrome(listint_t **head);
+    Return: 0 if it is not a palindrome, 1 if it is a palindrome
+    An empty list is considered a palindrome
 
-Requirements:
-
-    Only these functions are allowed: write, printf, putchar, puts, malloc, free
-
-carrie@ubuntu:~/0x00$ cat lists.h
+carrie@ubuntu:0x03$ cat lists.h 
 #ifndef LISTS_H
 #define LISTS_H
-
-#include <stdlib.h>
 
 /**
  * struct listint_s - singly linked list
@@ -400,7 +515,7 @@ carrie@ubuntu:~/0x00$ cat lists.h
  * @next: points to the next node
  *
  * Description: singly linked list node structure
- * 
+ * for project
  */
 typedef struct listint_s
 {
@@ -409,13 +524,15 @@ typedef struct listint_s
 } listint_t;
 
 size_t print_listint(const listint_t *h);
-listint_t *add_nodeint(listint_t **head, const int n);
+listint_t *add_nodeint_end(listint_t **head, const int n);
 void free_listint(listint_t *head);
-int check_cycle(listint_t *list);
+
+int is_palindrome(listint_t **head);
 
 #endif /* LISTS_H */
+carrie@ubuntu:0x03$
 
-carrie@ubuntu:~/0x00$ cat 10-linked_lists.c
+carrie@ubuntu:0x03$ cat linked_lists.c 
 #include <stdio.h>
 #include <stdlib.h>
 #include "lists.h"
@@ -443,22 +560,33 @@ size_t print_listint(const listint_t *h)
 }
 
 /**
- * add_nodeint - adds a new node at the beginning of a listint_t list
- * @head: pointer to a pointer of the start of the list
- * @n: integer to be included in node
+ * add_nodeint_end - adds a new node at the end of a listint_t list
+ * @head: pointer to pointer of first node of listint_t list
+ * @n: integer to be included in new node
  * Return: address of the new element or NULL if it fails
  */
-listint_t *add_nodeint(listint_t **head, const int n)
+listint_t *add_nodeint_end(listint_t **head, const int n)
 {
     listint_t *new;
+    listint_t *current;
+
+    current = *head;
 
     new = malloc(sizeof(listint_t));
     if (new == NULL)
         return (NULL);
 
     new->n = n;
-    new->next = *head;
-    *head = new;
+    new->next = NULL;
+
+    if (*head == NULL)
+        *head = new;
+    else
+    {
+        while (current->next != NULL)
+            current = current->next;
+        current->next = new;
+    }
 
     return (new);
 }
@@ -479,83 +607,66 @@ void free_listint(listint_t *head)
         free(current);
     }
 }
+carrie@ubuntu:0x03$
 
-carrie@ubuntu:~/0x00$ cat 10-main.c
-#include <stdlib.h>
-#include <string.h>
+carrie@ubuntu:0x03$ cat 13-main.c
 #include <stdio.h>
+#include <stdlib.h>
 #include "lists.h"
 
 /**
- * main - check the code
+ * main - check the code for
  *
  * Return: Always 0.
  */
 int main(void)
 {
     listint_t *head;
-    listint_t *current;
-    listint_t *temp;
-    int i;
 
     head = NULL;
-    add_nodeint(&head, 0);
-    add_nodeint(&head, 1);
-    add_nodeint(&head, 2);
-    add_nodeint(&head, 3);
-    add_nodeint(&head, 4);
-    add_nodeint(&head, 98);
-    add_nodeint(&head, 402);
-    add_nodeint(&head, 1024);
+    add_nodeint_end(&head, 1);
+    add_nodeint_end(&head, 17);
+    add_nodeint_end(&head, 972);
+    add_nodeint_end(&head, 50);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 98);
+    add_nodeint_end(&head, 50);
+    add_nodeint_end(&head, 972);
+    add_nodeint_end(&head, 17);
+    add_nodeint_end(&head, 1);
     print_listint(head);
 
-    if (check_cycle(head) == 0)
-        printf("Linked list has no cycle\n");
-    else if (check_cycle(head) == 1)
-        printf("Linked list has a cycle\n");
-
-    current = head;
-    for (i = 0; i < 4; i++)
-        current = current->next;
-    temp = current->next;
-    current->next = head;
-
-    if (check_cycle(head) == 0)
-        printf("Linked list has no cycle\n");
-    else if (check_cycle(head) == 1)
-        printf("Linked list has a cycle\n");
-
-    current = head;
-    for (i = 0; i < 4; i++)
-        current = current->next;
-    current->next = temp;
+    if (is_palindrome(&head) == 1)
+        printf("Linked list is a palindrome\n");
+    else
+        printf("Linked list is not a palindrome\n");
 
     free_listint(head);
 
     return (0);
 }
+carrie@ubuntu:0x03$
 
-carrie@ubuntu:~/0x00$ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 10-main.c 10-check_cycle.c 10-linked_lists.c -o cycle
-carrie@ubuntu:~/0x00$$ ./cycle 
-1024
-402
-98
-4
-3
-2
+carrie@ubuntu:0x03$ gcc -Wall -Werror -Wextra -pedantic 13-main.c linked_lists.c 13-is_palindrome.c -o palindrome
+carrie@ubuntu:0x03$ ./palindrome
 1
-0
-Linked list has no cycle
-Linked list has a cycle
-carrie@ubuntu:~/0x00$
-
-    Solving a problem is already a big win! but finding the best and optimal way to solve it, it’s way better! Think about the most optimal / fastest way to do it.
+17
+972
+50
+98
+98
+50
+972
+17
+1
+Linked list is a palindrome
+carrie@ubuntu:0x03$
 
 Repo:
 
     GitHub repository: alx-higher_level_programming
-    Directory: 0x00-python-hello_world
-    File: 10-check_cycle.c, lists.h
+    Directory: 0x03-python-data_structures
+    File: 13-is_palindrome.c, lists.h
 
 Copyright © 2023 ALX, All rights reserved.
 
