@@ -1,9 +1,15 @@
 #!/usr/bin/python3
 
 def square_matrix_simple(matrix=[]):
-    res = []
+    resma = []
 
-    for m in matrix:
-        res.append(list(map(lambda x: x ** 2, m)))
+    for row in matrix:
 
-    return res
+        result_row = []
+
+        for value in row:
+            result_row.append(value ** 2)
+
+        resma.append(result_row)
+
+    return resma
